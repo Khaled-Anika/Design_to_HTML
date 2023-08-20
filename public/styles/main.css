@@ -7,7 +7,7 @@ body {
   box-sizing: border-box;
 }
 body .cover {
-  background-image: url("https://store-images.s-microsoft.com/image/apps.52870.14419706211314168.b0f9d237-3727-4f27-a56e-60574c628757.03f63d19-9160-4e4e-b26a-8fa32616d208?q=90&w=480&h=270");
+  background-image: url("src/assets/starfield.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
