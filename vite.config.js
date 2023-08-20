@@ -2,7 +2,7 @@ export default {
     build: {
       outDir: 'dist',
       assetsDir: 'assets',
-      base: '/DesignToHTML',
+      base: '/Design_to_HTML/',
       css: {
         preprocessorOptions: {
           scss: {
