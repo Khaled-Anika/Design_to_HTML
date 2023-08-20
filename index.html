@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>EF Frontend Dev Task</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="cover">
+            <div class="header">
+                <img class="logo" src="src/assets/ef-logo.png">
+                <div class="menu">
+                    <div class="navigation-menu">
+                        <span>Trending</span>
+                        <span>Pre-orders</span>
+                        <span>Upcoming</span>
+                        <span>Support 24/7</span>
+                    </div>
+                    <div class="product-menu" id="navMenu">
+                        <div class="menu-items">
+                            <div class="navigation-item" id="pcSubMenu" onclick="toggleSubMenu('pcSubMenu')">
+                                <i class="fa-solid fa-desktop"></i>
+                                <span>PC</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                            <div class="navigation-item" id="playstationSubMenu" onclick="toggleSubMenu('playstationSubMenu')">
+                                <i class="fa-brands fa-playstation"></i>
+                                <span>Playstation</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                            <div class="navigation-item" id="xboxSubMenu" onclick="toggleSubMenu('xboxSubMenu')">
+                                <i class="fa-brands fa-xbox"></i>
+                                <span>Xbox</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                            <div class="navigation-item" id="nintendoSubMenu" onclick="toggleSubMenu('nintendoSubMenu')">
+                                <i class="fa-brands fa-xbox"></i>
+                                <span>Nintendo</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <span class="search" onclick="toggleSearch(false)">
+                            <i class="icon fa-solid fa-magnifying-glass"></i>
+                        </span>
+                    </div>
+                    <div class="search-wrapper" id="searchBar">
+                        <input class="search-bar" placeholder="Minecraft, Rpg, multiplayer..."/>
+                        <i class="fa-solid fa-xmark" onclick="toggleSearch(true)"></i>
+                    </div>
+                </div>
+                <div class="header-icons">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="tilt-content"></div>
+            </div>
+                
+            <div class="child-menu" id="childMenu">
+                <div class="platforms-header">
+                    <span>Platforms</span>
+                    <span>View all</span>
+                </div>
+                <div class="menu-items">
+                    <div class="platform-item">
+                        <img src="src/assets/steam.png" />
+                        <span>Steam</span>
+                    </div>
+                    <div class="platform-item">
+                        <img src="src/assets/steam.png" />
+                        <span>Ubisoft Connect</span>
+                    </div>
+                    <div class="platform-item">
+                        <img src="src/assets/steam.png" />
+                        <span>EA App</span>
+                    </div>
+                    <div class="platform-item">
+                        <img src="src/assets/steam.png" />
+                        <span>Battle.net</span>
+                    </div>
+                    <div class="platform-item">
+                        <img src="src/assets/steam.png" />
+                        <span>Rockstar</span>
+                    </div>
+                    <div class="platform-item">
+                        <img src="src/assets/steam.png" />
+                        <span>GOG.com</span>
+                    </div>
+                    <div class="platform-item">
+                        <img src="src/assets/steam.png" />
+                        <span>Microsoft Store</span>
+                    </div>
+                    <div class="platform-item">
+                        <img src="src/assets/steam.png" />
+                        <span>Epic</span>
+                    </div>
+                </div>
+                <div class="cards-header">
+                    <span>Prepaid cards</span>
+                    <span>View all</span>
+                </div>
+                <div class="menu-items">
+                    <div class="card-item">
+                        <img src="src/assets/blizzard.png" />
+                        <span>Steam</span>
+                    </div>
+                    <div class="card-item">
+                        <img src="src/assets/blizzard.png" />
+                        <span>Ubisoft Connect</span>
+                    </div>
+                    <div class="card-item">
+                        <img src="src/assets/blizzard.png" />
+                        <span>EA App</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-menu" id="navMenuMobile">
+                <div class="menu-items">
+                    <div class="navigation-item" id="pcSubMenu" onclick="toggleSubMenu('pcSubMenu')">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>PC</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="navigation-item" id="playstationSubMenu" onclick="toggleSubMenu('playstationSubMenu')">
+                        <i class="fa-brands fa-playstation"></i>
+                        <span>Playstation</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="navigation-item" id="xboxSubMenu" onclick="toggleSubMenu('xboxSubMenu')">
+                        <i class="fa-brands fa-xbox"></i>
+                        <span>Xbox</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="navigation-item" id="nintendoSubMenu" onclick="toggleSubMenu('nintendoSubMenu')">
+                        <i class="fa-brands fa-xbox"></i>
+                        <span>Nintendo</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+                <span class="search" onclick="toggleSearch(false, true)">
+                    <i class="icon fa-solid fa-magnifying-glass"></i>
+                </span>
+            </div>
+
+            <div class="details">
+                <span class="days">In 15 days</span>
+                <h3 class="text">Starfield Digital Premium Edition + Early Access</h3>
+                <div class="cost">
+                    <div class="offer-box">
+                        <span class="cost-tilt-content"></span>
+                    </div>
+                    <span class="offer-amount"> -25% </span>
+                    <span class="price"> 74.89$ </span>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-header">
+                <h3>Trending</h3>
+                <span class="view-button">
+                    View all
+                </span>
+            </div>
+            <div class="game-items">
+                <div class="product">
+                    <div class="product-container">
+                        <img class="product-image" src="src/assets/sengoku.jpg">
+                        <div class="cost">
+                            <div class="offer-box">
+                                <span class="cost-tilt-content"></span>
+                            </div>
+                            <span class="offer-amount"> -25% </span>
+                        </div>
+                        <div class="item-details">
+                            <span>Sengoku Dynasty</span>
+                            <span>19.99$</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-container">
+                        <img class="product-image" src="src/assets/horse-ranch.jpeg">
+                        <div class="cost">
+                            <div class="offer-box">
+                                <span class="cost-tilt-content"></span>
+                            </div>
+                            <span class="offer-amount"> -25% </span>
+                        </div>
+                        <div class="item-details">
+                            <div class="item-title">
+                                <span class="downloadable-tag">DLC</span>
+                                <span>The Sims 4 Horse Ranch</span>
+                            </div>
+                            <span>30.99$</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-container">
+                        <img class="product-image" src="src/assets/remnant.jpg">
+                        <div class="cost">
+                            <div class="offer-box">
+                                <span class="cost-tilt-content"></span>
+                            </div>
+                            <span class="offer-amount"> -25% </span>
+                        </div>
+                        <div class="item-details">
+                            <span>Remnant 2</span>
+                            <span>34.89$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="/src/index.js"></script>
+    </body>
+</html>
