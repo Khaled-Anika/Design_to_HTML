@@ -1,5 +1,3 @@
-import './styles/main.scss';
-
 function toggleSubMenu(subMenuId) {
     const subMenu = document.getElementById('childMenu');
     
